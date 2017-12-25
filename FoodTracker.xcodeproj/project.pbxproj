@@ -14,6 +14,13 @@
 		45FC8A9B1FF1236F0042DA75 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45FC8A9A1FF1236F0042DA75 /* MainViewController.xib */; };
 		45FC8A9E1FF13F690042DA75 /* FoodOrderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FC8A9C1FF13F690042DA75 /* FoodOrderListViewController.swift */; };
 		45FC8A9F1FF13F6A0042DA75 /* FoodOrderListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45FC8A9D1FF13F690042DA75 /* FoodOrderListViewController.xib */; };
+		84488E121FF18347000DD830 /* launch.png in Resources */ = {isa = PBXBuildFile; fileRef = 84488E111FF18347000DD830 /* launch.png */; };
+		84488E161FF18688000DD830 /* CellForFoodOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84488E141FF18688000DD830 /* CellForFoodOrderTableViewCell.swift */; };
+		84488E171FF18688000DD830 /* CellForFoodOrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84488E151FF18688000DD830 /* CellForFoodOrderTableViewCell.xib */; };
+		84488E1B1FF18922000DD830 /* calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = 84488E181FF18921000DD830 /* calendar.png */; };
+		84488E1C1FF18922000DD830 /* money.png in Resources */ = {isa = PBXBuildFile; fileRef = 84488E191FF18922000DD830 /* money.png */; };
+		84488E1D1FF18922000DD830 /* team.png in Resources */ = {isa = PBXBuildFile; fileRef = 84488E1A1FF18922000DD830 /* team.png */; };
+		84488E1F1FF189B8000DD830 /* dinner.png in Resources */ = {isa = PBXBuildFile; fileRef = 84488E1E1FF189B8000DD830 /* dinner.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +33,13 @@
 		45FC8A9A1FF1236F0042DA75 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		45FC8A9C1FF13F690042DA75 /* FoodOrderListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodOrderListViewController.swift; sourceTree = "<group>"; };
 		45FC8A9D1FF13F690042DA75 /* FoodOrderListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodOrderListViewController.xib; sourceTree = "<group>"; };
+		84488E111FF18347000DD830 /* launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launch.png; sourceTree = "<group>"; };
+		84488E141FF18688000DD830 /* CellForFoodOrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellForFoodOrderTableViewCell.swift; sourceTree = "<group>"; };
+		84488E151FF18688000DD830 /* CellForFoodOrderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellForFoodOrderTableViewCell.xib; sourceTree = "<group>"; };
+		84488E181FF18921000DD830 /* calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar.png; sourceTree = "<group>"; };
+		84488E191FF18922000DD830 /* money.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = money.png; sourceTree = "<group>"; };
+		84488E1A1FF18922000DD830 /* team.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = team.png; sourceTree = "<group>"; };
+		84488E1E1FF189B8000DD830 /* dinner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dinner.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +56,11 @@
 		45FC8A7C1FF120350042DA75 = {
 			isa = PBXGroup;
 			children = (
+				84488E1E1FF189B8000DD830 /* dinner.png */,
+				84488E181FF18921000DD830 /* calendar.png */,
+				84488E191FF18922000DD830 /* money.png */,
+				84488E1A1FF18922000DD830 /* team.png */,
+				84488E111FF18347000DD830 /* launch.png */,
 				45FC8A871FF120350042DA75 /* FoodTracker */,
 				45FC8A861FF120350042DA75 /* Products */,
 			);
@@ -58,16 +77,26 @@
 		45FC8A871FF120350042DA75 /* FoodTracker */ = {
 			isa = PBXGroup;
 			children = (
+				84488E131FF18655000DD830 /* Food Order List */,
 				45FC8A881FF120350042DA75 /* AppDelegate.swift */,
 				45FC8A8A1FF120350042DA75 /* MainViewController.swift */,
 				45FC8A9A1FF1236F0042DA75 /* MainViewController.xib */,
-				45FC8A9C1FF13F690042DA75 /* FoodOrderListViewController.swift */,
-				45FC8A9D1FF13F690042DA75 /* FoodOrderListViewController.xib */,
 				45FC8A8F1FF120350042DA75 /* Assets.xcassets */,
 				45FC8A911FF120350042DA75 /* LaunchScreen.storyboard */,
 				45FC8A941FF120350042DA75 /* Info.plist */,
 			);
 			path = FoodTracker;
+			sourceTree = "<group>";
+		};
+		84488E131FF18655000DD830 /* Food Order List */ = {
+			isa = PBXGroup;
+			children = (
+				45FC8A9C1FF13F690042DA75 /* FoodOrderListViewController.swift */,
+				45FC8A9D1FF13F690042DA75 /* FoodOrderListViewController.xib */,
+				84488E141FF18688000DD830 /* CellForFoodOrderTableViewCell.swift */,
+				84488E151FF18688000DD830 /* CellForFoodOrderTableViewCell.xib */,
+			);
+			path = "Food Order List";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,8 +158,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84488E1B1FF18922000DD830 /* calendar.png in Resources */,
+				84488E171FF18688000DD830 /* CellForFoodOrderTableViewCell.xib in Resources */,
+				84488E1D1FF18922000DD830 /* team.png in Resources */,
 				45FC8A931FF120350042DA75 /* LaunchScreen.storyboard in Resources */,
+				84488E121FF18347000DD830 /* launch.png in Resources */,
+				84488E1C1FF18922000DD830 /* money.png in Resources */,
 				45FC8A901FF120350042DA75 /* Assets.xcassets in Resources */,
+				84488E1F1FF189B8000DD830 /* dinner.png in Resources */,
 				45FC8A9B1FF1236F0042DA75 /* MainViewController.xib in Resources */,
 				45FC8A9F1FF13F6A0042DA75 /* FoodOrderListViewController.xib in Resources */,
 			);
@@ -143,6 +178,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84488E161FF18688000DD830 /* CellForFoodOrderTableViewCell.swift in Sources */,
 				45FC8A9E1FF13F690042DA75 /* FoodOrderListViewController.swift in Sources */,
 				45FC8A8B1FF120350042DA75 /* MainViewController.swift in Sources */,
 				45FC8A891FF120350042DA75 /* AppDelegate.swift in Sources */,
@@ -274,6 +310,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 58PD6383K8;
 				INFOPLIST_FILE = FoodTracker/Info.plist;
@@ -289,6 +326,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 58PD6383K8;
 				INFOPLIST_FILE = FoodTracker/Info.plist;
