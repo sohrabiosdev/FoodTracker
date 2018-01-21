@@ -24,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		451D840C2014B7B4009C1B21 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		45FC8A851FF120350042DA75 /* FoodTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45FC8A881FF120350042DA75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45FC8A8A1FF120350042DA75 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +54,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		451D840B2014B7B3009C1B21 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				451D840C2014B7B4009C1B21 /* libsqlite3.0.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		45FC8A7C1FF120350042DA75 = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +72,7 @@
 				84488E111FF18347000DD830 /* launch.png */,
 				45FC8A871FF120350042DA75 /* FoodTracker */,
 				45FC8A861FF120350042DA75 /* Products */,
+				451D840B2014B7B3009C1B21 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
