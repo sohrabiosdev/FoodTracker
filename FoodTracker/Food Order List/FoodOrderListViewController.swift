@@ -29,7 +29,11 @@ class FoodOrderListViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        return 60.0;//Choose your custom row height
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -37,21 +41,20 @@ class FoodOrderListViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 5
+        return 25
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CellForFoodOrderTableViewCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CellForFoodOrderTableViewCell", for: indexPath) 
 
         // Configure the cell...
 
         return cell
     }
- 
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
-    {
-        return 60.0;//Choose your custom row height
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        print("You tapped cell number \(indexPath.row).")
     }
     /*
     // Override to support conditional editing of the table view.
