@@ -25,8 +25,8 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         self.title = "ERES FOOD TRACKER"
         addBarButtonPlus()
-        addBackgroundGradient()
-        //displayFoodOrderList()
+        //addBackgroundGradient()
+        displayFoodOrderList()
         // Do any additional setup after loading the view, typically from a nib.
         
         createDatabaseFile()
