@@ -9,15 +9,17 @@
 import UIKit
 import SQLite3
 
+
 class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var lblNoData: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
+     
     //Opaque pointers are used to represent C pointers to types that cannot be represented in Swift, such as incomplete struct types.
     
     // Database Variables
-    var db : OpaquePointer?
+    var db : OpaquePointer? = nil
     var fileURL: URL = URL(fileURLWithPath: "")
     
     
@@ -30,7 +32,9 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         // Do any additional setup after loading the view, typically from a nib.
         
         createDatabaseFile()
-        openDatabase()
+        db = openDatabase()
+        createFoodTableInDB()
+        insertDataInFoodTable()
     }
     
     override func didReceiveMemoryWarning() {
@@ -116,16 +120,30 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
        fileURL  = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent("FoodTrackerDatabase.sqlite")
     }
     
-    func openDatabase() {
+    func openDatabase() -> OpaquePointer? {
+        
         // Opening DataBase File
-        if sqlite3_open(fileURL.path , &db) != SQLITE_OK
+        if sqlite3_open(fileURL.path , &db) == SQLITE_OK
         {
-            print("DATA BASE NOT CREATED...!!!")
+            print("DATA BASE CREATED AT =", fileURL.path)
+            return db
         }
         else
         {
-            print("DATA BASE CREATED AT = %@", fileURL.path)
+            print("DATA BASE NOT CREATED...!!!")
+            return nil
         }
+    }
+
+    func createFoodTableInDB() {
+        if sqlite3_exec(db, "CREATE TABLE IF NOT EXISTS Food (id INTEGER PRIMARY KEY AUTOINCREMENT, date TEXT, amount FLOAT , persons INTEGER)", nil, nil, nil) != SQLITE_OK {
+            let errMsg = String(cString : sqlite3_errmsg(db)!)
+            print("Error in creating table : \(errMsg)")
+        }
+    }
+    
+    func insertDataInFoodTable() {
+
     }
 }
 
