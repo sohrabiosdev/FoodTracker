@@ -18,7 +18,7 @@ class FoodItem: NSObject {
     
     //MARK: Initialization
     
-    init?(date: String , amount: Float , persons: NSInteger )
+    init!(date: String , amount: Float , persons: NSInteger )
     {
         // Initialization should fail if there is no person or no name or amount is zero.
         if persons == 0 ||  amount == 0 || date.isEmpty
